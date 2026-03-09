@@ -7,7 +7,7 @@ Stephen A et al. Sulfur metabolism and immune-microbial networks across oral nic
 ## Data files
 
 clinical_data.csv  
-Clinical measurements including plaque index, bleeding on probing, diagnosis groups, and volatile sulfur compound measurements (H2S and CH3SH).
+Clinical measurements including plaque index, bleeding on probing, diagnosis groups, and volatile sulfur compound measurements (H<sub>2</sub>S and CH<sub>3</sub>SH).
 
 gcf_cytokines.csv  
 Matrix of gingival crevicular fluid cytokine concentrations.
