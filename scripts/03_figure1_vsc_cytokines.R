@@ -9,15 +9,23 @@ cytokines <- merged_data[c(18:37)]
 
 pca_results <- PCA(cytokines, scale.unit = TRUE)
 
-pca_cytokine_plot <- fviz_pca_ind(
-  pca_results,
-  geom.ind = "point",
-  col.ind = merged_data$diagnosis,
-  addEllipses = TRUE
-)
+# Order diagnosis groups
+merged_data$diagnosis <- factor(merged_data$diagnosis, levels = c("LPH", "HPH", "G", "P"))
 
-ggsave("figures/figure1/pca_scores.svg", pca_cytokine_plot)
-
+# Visualize PCA with specific requirements
+pca_cytokine_plot <- fviz_pca_ind(pca_results, 
+             geom.ind = "point", 
+             col.ind = merged_data$diagnosis, 
+             palette = c("gray", "#33FF57", "#3357FF", "#FF33A1"), # Bolder color palette
+             addEllipses = TRUE, 
+             legend.title = "Diagnosis",
+             pointshape = 19,  # Use dots for all points
+             pointsize = 3) +   # Fixed point size
+  theme_minimal() +            # Use minimal theme for clean look
+  theme(legend.position = "right", 
+        legend.title = element_text(face = "bold"), 
+        legend.text = element_text(size = 12), 
+        panel.border = element_rect(color = "black", fill = NA, size = 1)) # Ensure color order
 clinical_data$diagnosis <- factor(clinical_data$diagnosis,
                                   levels = c("LPH","HPH","G","P"))
 
