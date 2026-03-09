@@ -19,8 +19,8 @@ microbial_with_info <- microbial_data %>%
   left_join(sample_info, by = "sample")
 
 merged_data <- microbial_with_info %>%
-  left_join(clinical_data, by = "patno") %>%
-  left_join(gcf_cytokines, by = "patno")
+  left_join(clinical_data, by = "patient_no") %>%
+  left_join(gcf_cytokines, by = "patient_no")
 
 merged_data <- merged_data %>%
   mutate(
