@@ -30,7 +30,7 @@ merged_data <- merged_data %>%
     gcf_ch3sh_um_log = log1p(gcf_ch3sh_um)
   )
 
-cytokine_cols <- names(gcf_cytokines)[!(names(gcf_cytokines) %in% c("patno"))]
+cytokine_cols <- names(gcf_cytokines)[!(names(gcf_cytokines) %in% c("patient_no"))]
 microbe_cols <- setdiff(names(microbial_data), "sample")
 
 merged_data[cytokine_cols] <- scale(merged_data[cytokine_cols])
