@@ -21,7 +21,7 @@ Mapping file linking sample IDs to patient IDs and oral niches (interdental, sub
 qpcr_data.csv  
 qPCR abundance measurements for selected bacterial taxa.
 
-pred_metagenome_unstrat.tsv  
+path_abun_unstrat.tsv.gz  
 PICRUSt2 predicted enzyme abundance table.
 
 ## Scripts
