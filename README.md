@@ -37,5 +37,5 @@ Data: Creative Commons Attribution 4.0 (CC BY 4.0)
 
 If you use this dataset please cite:
 
-Stephen A et al. (2025)
+Stephen A et al. (2026)
 Sulfur metabolism and immune-microbial networks across oral niches in periodontal disease.
